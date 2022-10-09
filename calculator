@@ -1,0 +1,27 @@
+print("enter first number: ")
+num1 = int(input())
+
+print("enter second number: ")
+num2 = int(input())
+
+print("enter operator: + , - , * , / ")
+op = input()
+
+if op == '+':
+    add = num1 + num2
+    print("addition of given number is : ")
+    print(add)
+elif op == '-':
+    sub = num1 - num2
+    print("substraction of given number is : ")
+    print(sub)
+elif op == '*':
+    multi = num1 * num2
+    print("multiplication of given number is : ")
+    print(multi)
+elif op == '/':
+    div = num1 / num2
+    print("division of given number is : ")
+    print(div)
+else:
+    print("error !!! choose only + , - , * , / ")
