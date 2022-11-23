@@ -68,3 +68,66 @@ if __name__ == '__main__':
                 exit()
             elif user_ch2 == 'c':
                 continue
+                
+                
+                
+ #===========================================================================================================================================
+
+
+#===============================================================================================================
+
+#other way    
+
+
+
+class library:
+    def display(self, name):
+        print("welcome to "+name ,end=" ")
+
+    def lend(self, list):
+        print("which book do you want ? ")
+        a = input()
+        print("what is your name? ")
+        name = input()
+        f = open("books.txt","a")
+        f.write("\n(a)"+ name +"\n")
+        print(f"{a} is now with you {name}")
+        return f"{list.remove(a)}"
+
+    def add(self, list):
+        print("write the book name you want to add: ")
+        a = input()
+        print("what is your name? ")
+        name = input()
+        print("successfully added")
+        return list.append(a)
+
+    def ret(self,list):
+        print("what do you want to return: " )
+        a = input()
+        print("your name: ")
+        name = input()
+        print("done")
+        return list.append(a)
+
+mylib = library()
+mainlist = ["maths","physic","ramayana","mahabharat","chemistry","hindi","english"]
+mylib.display("My library")
+print(mainlist)
+while True:
+    print("what do you want to do: (display , add , lend or return ) ")
+    do = input()
+    if do == "lend":
+        mylib.lend(mainlist)
+    elif do == "add":
+        mylib.add(mainlist)
+    elif do =="return":
+        mylib.ret(mainlist)
+    elif do == "display":
+        print(mainlist)
+    else:
+        print("please enter correct key...!!!")
+
+
+
+
